@@ -11,7 +11,7 @@ Framework: React, para a construção da interface de usuário de forma declarat
 
 Bundler: Vite, utilizado para um ambiente de desenvolvimento rápido e um build otimizado para produção.
 
-Estilização: CSS modularizado, aplicando estilos específicos a cada componente utilizando a convenção [NomeDoComponente].module.css.
+Estilização: CSS modularizado, aplicando estilos específicos a cada componente.
 
 Gerenciamento de Estado: Context API do React, combinada com o hook useReducer, para um gerenciamento de estado global e previsível.
 
