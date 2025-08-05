@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+Chronos Pomodoro:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de um timer Pomodoro moderno e personalizável, desenvolvido como parte de um curso de React com TypeScript. O objetivo foi criar uma aplicação robusta e bem estruturada para ajudar a gerenciar o tempo de trabalho e pausas.
 
-Currently, two official plugins are available:
+Tecnologias Principais
+O projeto foi construído com as seguintes tecnologias e ferramentas:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Linguagem Principal: TypeScript, para adicionar tipagem estática e melhorar a manutenibilidade do código.
 
-## Expanding the ESLint configuration
+Framework: React, para a construção da interface de usuário de forma declarativa e baseada em componentes.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Bundler: Vite, utilizado para um ambiente de desenvolvimento rápido e um build otimizado para produção.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Estilização: CSS modularizado, aplicando estilos específicos a cada componente utilizando a convenção [NomeDoComponente].module.css.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Gerenciamento de Estado: Context API do React, combinada com o hook useReducer, para um gerenciamento de estado global e previsível.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Notificações: react-toastify, para exibir mensagens e alertas de forma elegante e não intrusiva.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Roteamento: react-router, para gerenciar as rotas e navegação entre as diferentes páginas da aplicação.
+
+Timer: Web Worker, para executar a lógica do timer em um thread separado, evitando que a interface de usuário trave.
+
+Funcionalidades:
+
+Início e Pausa do Timer: Inicie, pause e reinicie a contagem do tempo de forma simples.
+
+Ciclos Pomodoro Personalizáveis: Configure a duração do tempo de trabalho, pausa curta e pausa longa.
+
+Histórico de Tarefas: Salve o histórico das tarefas concluídas com o timer.
+
+Notificações Visuais: Receba notificações visuais no browser ao final de cada ciclo.
+
+Instalação como Aplicativo (PWA)
+
+O projeto inclui um Web Manifest, o que o torna um PWA (Progressive Web App). Isso significa que você pode instalá-lo diretamente do seu navegador, em dispositivos móveis ou desktop, para ter uma experiência de uso offline e mais fluida, como se fosse um aplicativo nativo.
